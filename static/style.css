@@ -154,7 +154,7 @@ img {
 }
 
 .social__link {
-    display: block;
+    display: flex;
     width: 1.6em;
     height: 1.6em;
     background-repeat: no-repeat;
