@@ -66,13 +66,13 @@ img {
     color: black;
 }
 
-.welcome__text_greeting {
+.welcome__text-greeting {
     font-size: 64%;
     margin: 4%;
     color: black;
 }
 
-.welcome__text_link {
+.welcome__text-link {
     color: black;
     text-decoration: none;
 }
