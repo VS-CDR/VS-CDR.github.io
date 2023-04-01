@@ -20,22 +20,9 @@
 /*fonts-end*/
 
 /*global_params-begin*/
-p {
-    color: whitesmoke;
-}
-
 ul {
     list-style-type: disclosure-closed;
     line-height: 2em;
-    color: whitesmoke;
-}
-
-h3 {
-    color: whitesmoke;
-}
-
-img {
-    color: whitesmoke;
 }
 /*global_params-end*/
 
@@ -44,7 +31,7 @@ img {
     justify-content: space-around;
 }
 
-.flex-col {
+.welcome_flex-col {
     display: flex;
     flex-direction: column;
 }
@@ -54,6 +41,7 @@ img {
     padding: 0;
     background-color: black;
     font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
 }
 
 .welcome {
@@ -83,7 +71,7 @@ img {
     height: 32vw;
 }
 
-.centered-block {
+.info_centered {
     margin: auto;
 }
 

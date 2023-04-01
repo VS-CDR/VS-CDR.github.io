@@ -22,35 +22,35 @@
 </head>
 <body class="page">
 <header class="welcome flex-row">
-    <div class="welcome__text flex-col">
+    <div class="welcome__text welcome_flex-col">
         <p class="welcome__text-greeting">Привет, я ...</p>
-        <a href="#" class="welcome__text-link" lang="en">Владислав Шубин</a>
+        <a href="#" class="welcome__text-link" lang="ru">Владислав Шубин</a>
     </div>
     <img class="welcome__image" src="static/img/personal/main.webp" alt="фотопортрет">
 </header>
-<main class="info centered-block">
+<main class="info info_centered">
     <div class="info__about-me flex-row">
         <img src="static/img/personal/student.webp" class="info__about-me_photo" alt="Выпускник">
         <section class="education">
-            <h3>Образование</h3>
-            <ul>
+            <h3 class="education__title">Образование</h3>
+            <ul class="education__info">
                 <li>
-                    <h4>ЧУ ДО Школа программистов</h4>
-                    <p>курсы повышения квалификации</p>
+                    <h4 class="education__subtitle">ЧУ ДО Школа программистов</h4>
+                    <p class="education__text">курсы повышения квалификации</p>
                 </li>
                 <li>
-                    <h4>Среднее общее:</h4>
-                    <p>МАОУ «СОШ № 13 с УИОП»<br>г. Электросталь</p>
+                    <h4 class="education__subtitle">Среднее общее:</h4>
+                    <p class="education__text">МАОУ «СОШ № 13 с УИОП»<br>г. Электросталь</p>
                 </li>
                 <li>
-                    <h4>Высшее - бакалавриат:</h4>
-                    <p>ВШПИ МФТИ,<br>Сентябрь 2022 - Май 2026</p>
+                    <h4 class="education__subtitle">Высшее - бакалавриат:</h4>
+                    <p class="education__text">ВШПИ МФТИ,<br>Сентябрь 2022 - Май 2026</p>
                 </li>
             </ul>
         </section>
         <section class="interests">
-            <h3>Интересы</h3>
-            <ul>
+            <h3 class="interests__title">Интересы</h3>
+            <ul class="interests__info">
                 <li>Machine Learning</li>
                 <li>Футбол</li>
                 <li>Марксизм</li>
@@ -61,8 +61,8 @@
     </div>
     <div class="info__specialized flex-row">
         <section class="skills">
-            <h3>Навыки</h3>
-            <ul>
+            <h3 class="skills__title">Навыки</h3>
+            <ul class="skills__info">
                 <li>Git, CI/CD</li>
                 <li>C++, Python</li>
                 <li>Django, PyTorch, Scikit-learn</li>
@@ -72,8 +72,8 @@
             </ul>
         </section>
         <section class="work-experience">
-            <h3 class="column_title">Опыт работы</h3>
-            <ul>
+            <h3 class="work-experience__title column_title">Опыт работы</h3>
+            <ul class="work-experience__info">
                 <li>
                     <p>ВШПИ МФТИ,<br>Сентябрь 2022 - Наст. время</p>
                     <ul class="column">
@@ -95,7 +95,7 @@
 </main>
 <footer class="footer">
     <h4 class="social__text">Я в соцсетях:</h4>
-    <ul class="social">
+    <ul class="social social_info">
         <li class="social__item telegram">
             <a href="https://t.me/Shubin2k4" aria-label="Ссылка на Telegram" class="social__link"></a>
         </li>
