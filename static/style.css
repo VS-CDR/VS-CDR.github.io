@@ -85,7 +85,7 @@ ul {
     margin: 4vw;
 }
 
-.info__about-me_photo {
+.info__about-me-photo {
     margin: 2% 1%;
     width: 30%;
     height: 30%;
@@ -96,7 +96,7 @@ ul {
     margin: 4vw;
 }
 
-.info__specialized_process {
+.info__process {
     margin: 1vw auto;
     width: 32%;
     height: 32%;
@@ -132,7 +132,7 @@ ul {
     background-color: #38383C;
 }
 
-.social__text {
+.footer__text {
     color: aliceblue;
 }
 
