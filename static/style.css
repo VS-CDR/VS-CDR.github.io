@@ -138,6 +138,8 @@ ul {
 
 .social__item {
     display: inline-block;
+    height: 1vh;
+    width: 1vw;
     border-radius: 32%;
 }
 
