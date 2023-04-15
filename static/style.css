@@ -143,8 +143,8 @@ ul {
 
 .social__link {
     display: flex;
-    width: 20vw;
-    height: 20vh;
+    width: 1.6em;
+    height: 1.6em;
     background-repeat: no-repeat;
     background-size: contain;
 }
