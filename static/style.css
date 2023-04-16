@@ -143,8 +143,8 @@ ul {
 
 .social__link {
     display: block;
-    min-width: 4vh;
-    min-height: 4vh;
+    min-width: 8vw;
+    min-height: 8vw;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
