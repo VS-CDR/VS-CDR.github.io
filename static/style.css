@@ -143,8 +143,8 @@ ul {
 
 .social__link {
     display: block;
-    width: 3vh;
-    height: 3vh;
+    width: 20px;
+    height: 20px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
