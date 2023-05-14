@@ -24,8 +24,23 @@ function ChangeTheme() {
     elem = document.querySelector(".footer__text");
     elem.classList.toggle('footer__text_dark');
     elem.classList.toggle('footer__text_light');
+
+    elem = document.querySelector(".footer__rain-button");
+    elem.classList.toggle('footer__rain-button_dark');
+    elem.classList.toggle('footer__rain-button_light');
 }
 
 theme_btn.addEventListener("click", ChangeTheme);
 
-const elementsWithTheme = document.querySelectorAll(".theme");
+let rain = document.querySelector(".rain");
+
+window.addEventListener('resize', function () {
+    if (rain.classList.contains("rain_open")) {
+        rain.classList.toggle("rain_animation");
+    }
+})
+rain.addEventListener('click', function () {
+    if (rain.classList.contains("rain_open")) {
+        rain.classList.remove("rain_open");
+    }
+})

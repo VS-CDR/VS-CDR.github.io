@@ -46,3 +46,21 @@
     background-image: url(../../img/social_networks/github.webp);
     background-size: cover;
 }
+
+.footer__rain-button {
+    position: absolute;
+    top: 16vw;
+    left: 16vw;
+    width: 4vw;
+    height: 4vw;
+    border: 0;
+    background-size: cover;
+    background-color: transparent;
+}
+
+.footer__rain-button_dark {
+    background-image: url("static/img/buttons/rain/rain-dark.png");
+}
+.footer__rain-button_light {
+    background-image: url("static/img/buttons/rain/rain-light.png");
+}

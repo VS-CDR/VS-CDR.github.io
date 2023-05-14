@@ -10,10 +10,10 @@
 }
 
 .header__theme-button_dark {
-    background-image: url("../../img/buttons/theme-icon-light.png");
+    background-image: url("../../img/buttons/theme/icon-dark.png");
 }
 .header__theme-button_light {
-    background-image: url("../../img/buttons/theme-icon-dark.png");
+    background-image: url("../../img/buttons/theme/icon-light.png");
 }
 
 .header {
