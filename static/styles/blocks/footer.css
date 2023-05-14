@@ -1,8 +1,8 @@
 .footer_dark {
-    background-color: #38383C;
+    background-color: #1F2833;
 }
 .footer_light {
-    background-color: aliceblue;
+    background-color: #2B7A78;
 }
 
 .footer {
@@ -14,10 +14,10 @@
 }
 
 .footer__text_dark {
-    color: aliceblue;
+    color: #66FCF1;
 }
 .footer__text_light {
-    color: darkblue;
+    color: whitesmoke;
 }
 
 .social__item {
