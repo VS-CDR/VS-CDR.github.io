@@ -21,9 +21,6 @@
     .rain_active {
         display: none;
     }
-    .footer__rain-button {
-        display: none;
-    }
 }
 
 @keyframes rain {

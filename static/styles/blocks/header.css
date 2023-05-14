@@ -4,10 +4,6 @@
     left: 16px;
     width: 4vw;
     height: 4vw;
-    border: 0;
-    background-size: cover;
-    background-color: transparent;
-    cursor: pointer;
 }
 
 .header__theme-button_dark {

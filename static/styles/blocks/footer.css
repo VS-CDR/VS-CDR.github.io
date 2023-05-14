@@ -6,12 +6,15 @@
 }
 
 .footer {
-    padding-left: 4%;
+    padding-left: 0;
     height: 8vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    position: relative;
+}
+
+.footer__text {
+    font-size: 1.6vw;
 }
 
 .footer__text_dark {
@@ -48,21 +51,33 @@
     background-size: cover;
 }
 
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 8vw;
+    width: 100%;
+}
+
 .footer__rain-button {
-    position: absolute;
-    bottom: 1.8vh;
-    right: 2vw;
-    width: 3.2em;
-    height: 3.2em;
-    border: 0;
-    background-size: cover;
-    background-color: transparent;
-    cursor: pointer;
+    width: 2.8vw;
+    height: 2.8vw;
 }
 
 .footer__rain-button_dark {
-    background-image: url("../../img/buttons/rain/rain-light.png");
+    background-image: url("../../img/buttons/rain/icon-light.png");
 }
 .footer__rain-button_light {
-    background-image: url("../../img/buttons/rain/rain-dark.png");
+    background-image: url("../../img/buttons/rain/icon-dark.png");
+}
+
+.footer__feedback-button {
+    width: 2.8vw;
+    height: 2.8vw;
+}
+
+.footer__feedback-button_dark {
+    background-image: url("../../img/buttons/feedback/icon-light.png");
+}
+.footer__feedback-button_light {
+    background-image: url("../../img/buttons/feedback/icon-dark.png");
 }

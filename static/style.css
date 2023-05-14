@@ -19,6 +19,13 @@ ul {
     padding: 0;
     font-family: 'Press Start 2P', cursive;
 }
+
+.button {
+    border: 0;
+    background-size: cover;
+    background-color: transparent;
+    cursor: pointer;
+}
 /*global_params-end*/
 
 /* fonts-begin */
