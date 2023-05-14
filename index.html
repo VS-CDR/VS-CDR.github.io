@@ -26,7 +26,7 @@
         <p class="header__text-greeting">Привет, я ...</p>
         <p class="header__text-name" lang="ru">Владислав Шубин</p>
     </div>
-    <button class="button header__theme-button header__theme-button_dark"></button>
+    <button class="button header__theme-button header__theme-button_dark" name="ChangeTheme"></button>
     <img class="header__image" src="static/img/personal/main.webp" alt="фотопортрет">
 </header>
 <main class="info info_dark">
@@ -108,8 +108,8 @@
         </li>
     </ul>
     <div class="buttons">
-        <button class="button footer__feedback-button footer__feedback-button_dark" onclick="window.contact_me.showModal();"></button>
-        <button class="button footer__rain-button footer__rain-button_dark"></button>
+        <button name="SendFeedback" class="button footer__feedback-button footer__feedback-button_dark" onclick="window.contact_me.showModal();"></button>
+        <button name="ActivateRain" class="button footer__rain-button footer__rain-button_dark"></button>
     </div>
 </footer>
 <dialog class="form-popup" id="contact_me">
