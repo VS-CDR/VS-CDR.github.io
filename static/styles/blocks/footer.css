@@ -57,6 +57,7 @@
     border: 0;
     background-size: cover;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .footer__rain-button_dark {

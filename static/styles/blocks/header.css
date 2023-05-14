@@ -7,6 +7,7 @@
     border: 0;
     background-size: cover;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .header__theme-button_dark {
@@ -50,12 +51,14 @@
     margin: 4%;
 }
 
-.header__text-link {
+.header__text-name {
     text-decoration: none;
+    cursor: none;
 }
 
 .header__image {
     margin: 4% 4%;
     width: 33.6vw;
     height: 32vw;
+    cursor: none;
 }

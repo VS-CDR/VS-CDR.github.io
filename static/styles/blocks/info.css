@@ -20,6 +20,7 @@
     width: 30%;
     height: 30%;
     background-size: cover;
+    cursor: none;
 }
 
 .info__specialized {
@@ -32,6 +33,7 @@
     height: 28%;
     background-image: url("../../img/personal/at_the_computer.webp");
     background-size: cover;
+    cursor: none;
 }
 
 .education {
