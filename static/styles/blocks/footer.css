@@ -11,6 +11,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
 }
 
 .footer__text_dark {
@@ -49,18 +50,18 @@
 
 .footer__rain-button {
     position: absolute;
-    top: 16vw;
-    left: 16vw;
-    width: 4vw;
-    height: 4vw;
+    bottom: 1.8vh;
+    right: 2vw;
+    width: 3.2em;
+    height: 3.2em;
     border: 0;
     background-size: cover;
     background-color: transparent;
 }
 
 .footer__rain-button_dark {
-    background-image: url("static/img/buttons/rain/rain-dark.png");
+    background-image: url("../../img/buttons/rain/rain-light.png");
 }
 .footer__rain-button_light {
-    background-image: url("static/img/buttons/rain/rain-light.png");
+    background-image: url("../../img/buttons/rain/rain-dark.png");
 }

@@ -34,13 +34,3 @@ theme_btn.addEventListener("click", ChangeTheme);
 
 let rain = document.querySelector(".rain");
 
-window.addEventListener('resize', function () {
-    if (rain.classList.contains("rain_open")) {
-        rain.classList.toggle("rain_animation");
-    }
-})
-rain.addEventListener('click', function () {
-    if (rain.classList.contains("rain_open")) {
-        rain.classList.remove("rain_open");
-    }
-})
