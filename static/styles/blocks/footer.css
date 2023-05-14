@@ -1,0 +1,48 @@
+.footer_dark {
+    background-color: #38383C;
+}
+.footer_light {
+    background-color: aliceblue;
+}
+
+.footer {
+    padding-left: 4%;
+    height: 8vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer__text_dark {
+    color: aliceblue;
+}
+.footer__text_light {
+    color: darkblue;
+}
+
+.social__item {
+    display: inline-block;
+    border-radius: 32%;
+}
+
+.social__link {
+    display: block;
+    width: 2.8vw;
+    height: 2.8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.telegram {
+    background-image: url(../../img/social_networks/telegram.webp);
+    background-size: cover;
+}
+.vk {
+    background-image: url(../../img/social_networks/vk.webp);
+    background-size: cover;
+}
+.github {
+    background-image: url(../../img/social_networks/github.webp);
+    background-size: cover;
+}
