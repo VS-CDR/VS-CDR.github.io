@@ -1,0 +1,56 @@
+.form-popup__container {
+    max-width: 64vw;
+    width: 100%;
+    padding: 1vw;
+    background-color: #1F2833;
+}
+
+.form-popup__heading {
+    font-size: 1.6vw;
+    padding-bottom: 2vh;
+    font-weight: 600;
+    color: #3AAFA9;
+}
+
+.form-popup__text {
+    color: #3AAFA9;
+    font-size: 1vw;
+    font-weight: 300;
+}
+
+.form-popup__input {
+    margin-bottom: 0.8vh;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 1vh;
+}
+
+.form-popup__button {
+    margin-top: 1vh;
+    border: none;
+    outline: none;
+    background-color: black;
+    height: 4vh;
+    max-width: 64vw;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.4vw;
+    font-weight: 400;
+    text-align: center;
+    color: #3AAFA9;
+}
+
+.form-popup__close-button {
+    position: absolute;
+    top: 3.2vh;
+    right: 3.2vw;
+    /*padding: 1vw 0;*/
+    width: 2vw;
+    height: 2vw;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url(../../img/buttons/close.png);
+    background-size: cover;
+}

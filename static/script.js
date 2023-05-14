@@ -1,4 +1,5 @@
 const theme_btn = document.querySelector(".header__theme-button");
+const contact_me = document.getElementById("contact_me");
 
 function ChangeTheme() {
     let elem = document.querySelector(".header__theme-button");

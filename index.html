@@ -108,10 +108,27 @@
         </li>
     </ul>
     <div class="buttons">
-        <button class="button footer__feedback-button footer__feedback-button_dark"></button>
+        <button class="button footer__feedback-button footer__feedback-button_dark" onclick="window.contact_me.showModal();"></button>
         <button class="button footer__rain-button footer__rain-button_dark"></button>
     </div>
 </footer>
+<dialog class="form-popup" id="contact_me">
+    <div class="form-popup__container">
+        <h1 class="form-popup__heading">Форма обратной связи</h1>
+        <label for="phone" class="form-popup__text">Телефон</label>
+        <input type="tel" id="phone" required class="form-popup__input" placeholder="79165206161">
+        <span class="phone-error"></span>
+        <label for="email" class="form-popup__text">Email</label>
+        <input type="email" id="email" required class="form-popup__input" placeholder="VS-code-r@yandex.ru">
+        <span class="email-error"></span>
+        <label for="text" class="form-popup__text">Текст</label>
+        <input type="text" id="text" required class="form-popup__input" placeholder="Ваше сообщение">
+        <span class="text-error"></span>
+
+        <button class="form-popup__close-button" type="button" onclick="window.contact_me.close();"></button>
+        <button class="form-popup__button" type="submit"> Отправить </button>
+    </div>
+</dialog>
 <div class="rain rain_animation"></div>
 <script src="static/script.js"></script>
 </body>

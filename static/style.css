@@ -2,6 +2,7 @@
 @import url(styles/blocks/info.css);
 @import url(styles/blocks/footer.css);
 @import url(styles/rain.css);
+@import url(styles/popups/feedback.css);
 
 /*global_params-begin*/
 ul {
