@@ -1,0 +1,36 @@
+.rain {
+    display: none;
+    position: fixed;
+    z-index: 128;
+    top: 0;
+    left: 0;
+    height: 200vh;
+    width: 100vw;
+    background-image: url(../img/money_rain.png);
+    opacity: 0.8;
+}
+
+.rain_active {
+    display: block;
+}
+
+.rain_animation {
+    animation: rain 1s linear infinite;
+}
+@media (max-width: 800px) {
+    .rain_active {
+        display: none;
+    }
+    .footer__rain-button {
+        display: none;
+    }
+}
+
+@keyframes rain {
+    from {
+        top: -100vh;
+    }
+    to {
+        top: 0;
+    }
+}
