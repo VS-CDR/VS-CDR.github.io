@@ -5,6 +5,12 @@
 @import url(styles/rain.css);
 @import url(styles/popups/feedback.css);
 
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: black;
+    }
+}
+
 /*global_params-begin*/
 ul {
     list-style-type: disclosure-closed;
@@ -20,6 +26,14 @@ ul {
     margin: 0;
     padding: 0;
     font-family: 'Press Start 2P', cursive;
+}
+
+.page_dark {
+    background-color: black;
+}
+
+.page_light {
+    background-color: #DEF2F1;
 }
 
 .button {

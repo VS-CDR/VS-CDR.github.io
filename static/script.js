@@ -6,6 +6,10 @@ function ChangeTheme() {
     elem.classList.toggle("header__theme-button_dark")
     elem.classList.toggle("header__theme-button_light")
 
+    elem = document.querySelector(".page");
+    elem.classList.toggle("page_dark")
+    elem.classList.toggle("page_light")
+
     elem = document.querySelector(".header");
     elem.classList.toggle('header_dark');
     elem.classList.toggle('header_light');
