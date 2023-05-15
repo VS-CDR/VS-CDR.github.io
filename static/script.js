@@ -73,7 +73,7 @@ const popup_right_link = document.querySelector(".popup__link_right");
 
 images.forEach(function(image_element) {
     const link = image_element.src;
-    image_element.addEventListener('click', function(evt) {
+    image_element.addEventListener('click', function() {
         popup_img.src = link;
         check_links(image_element);
         popup.classList.add('popup_active');
