@@ -1,4 +1,5 @@
 .info {
+    font-size: 1.2vw;
     margin: 0;
 }
 
@@ -37,19 +38,10 @@
 }
 
 .education {
-    margin: 2%;
-    font-size: 1.2vw;
+    margin: 2vw;
 }
 
 .interests {
-    margin-top: 4%;
-    font-size: 1.2vw;
+    margin: 2vw;
 }
 
-.work-experience {
-    font-size: 1.2vw;
-}
-
-.skills {
-    font-size: 1.2vw;
-}
