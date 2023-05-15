@@ -17,6 +17,7 @@
 .rain_animation {
     animation: rain 1s linear infinite;
 }
+
 @media (max-width: 800px) {
     .rain_active {
         display: none;

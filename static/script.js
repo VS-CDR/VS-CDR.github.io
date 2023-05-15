@@ -38,8 +38,7 @@ themeBtn.addEventListener("click", ChangeTheme);
 const rainBtn = document.querySelector(".footer__rain-button");
 let rain = document.querySelector(".rain");
 
-rainBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
+rainBtn.addEventListener('click', function () {
     if (window.innerWidth >= 800) {
         rain.classList.add("rain_active");
         rain.classList.add("rain_animation");
@@ -106,6 +105,7 @@ const messagePopupButton = document.querySelector(".message-popup__close-button"
 
 sendMessage()
 messagePopupClose()
+
 function helloPopupOpen() {
     const popupMessage = document.querySelector(".message-popup");
     popupMessage.classList.add("message-popup_active");
