@@ -1,5 +1,6 @@
 .info {
     font-size: 1.2vw;
+    transition: 0.4s;
     margin: 0;
 }
 

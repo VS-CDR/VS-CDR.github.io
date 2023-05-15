@@ -6,6 +6,7 @@
 @import url(styles/popups/base.css);
 @import url(styles/popups/feedback.css);
 @import url(styles/popups/gallery.css);
+@import url(styles/popups/message.css);
 
 
 @media screen and (prefers-color-scheme: dark) {

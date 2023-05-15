@@ -1,0 +1,41 @@
+.message-popup {
+    display: none;
+    z-index: 512;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.message-popup__container {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    background-color: rgb(256, 256, 256);
+    border-radius: 10px;
+    position: relative;
+}
+
+.message-popup_active {
+    visibility: visible;
+}
+
+.message-popup__text {
+    font-size: 20vw;
+    font-weight: 600;
+    color: black;
+}
+
+.message-popup__close-button {
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-image: url(static/img/buttons/close.png);
+    background-size: cover;
+}

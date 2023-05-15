@@ -15,6 +15,7 @@
 
 .header {
     position: relative;
+    transition: 0.4s;
 }
 
 .header_flex-col {
@@ -54,7 +55,7 @@
 
 .header__image {
     margin: 4% 4%;
-    width: 33.6vw;
-    height: 32vw;
+    width: 30vw;
+    height: 29.2vw;
     cursor: grab;
 }

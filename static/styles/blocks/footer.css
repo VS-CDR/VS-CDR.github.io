@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    transition: 0.4s;
 }
 
 .footer__text {
