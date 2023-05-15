@@ -113,8 +113,7 @@
         <button name="ActivateRain" class="button footer__rain-button footer__rain-button_dark"></button>
     </div>
 </footer>
-<dialog class="form-popup" id="contact_me">
-    <div class="form-popup__container">
+<dialog class="form-popup form-popup__container" id="contact_me">
         <h1 class="form-popup__heading">Форма обратной связи</h1>
         <label for="phone" class="form-popup__text">Телефон</label>
         <input type="tel" id="phone" required class="form-popup__input" placeholder="79165206161">
@@ -128,7 +127,6 @@
 
         <button class="form-popup__close-button" type="button" onclick="window.contact_me.close();"></button>
         <button class="form-popup__button" type="submit"> Отправить </button>
-    </div>
 </dialog>
 <div class="rain rain_animation"></div>
 <script src="static/script.js"></script>
