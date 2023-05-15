@@ -45,6 +45,7 @@
 .header__text-greeting {
     font-size: 64%;
     margin: 4%;
+    cursor: grab;
 }
 
 .header__text-name {
