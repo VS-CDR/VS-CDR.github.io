@@ -52,7 +52,7 @@
 .gallery-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .gallery__picture_horizontal {
-    padding-bottom: 8vh;
+    padding-bottom: 4vh;
     width: 32%;
     height: 32%;
     background-size: cover;
