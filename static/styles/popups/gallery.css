@@ -1,0 +1,31 @@
+.popup__image {
+    max-width: 70vw;
+    max-height: 70vh;
+}
+
+.popup__link_left {
+    width: 4vw;
+    height: 4vw;
+    display: none;
+    text-decoration: none;
+    background-image: url("../../img/buttons/arrows/left-arrow.png");
+    background-size: cover;
+}
+
+.popup__link_right {
+    width: 4vw;
+    height: 4vw;
+    display: none;
+    text-decoration: none;
+    background-image: url("../../img/buttons/arrows/right-arrow.png");
+    background-size: cover;
+}
+
+.popup__image {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}

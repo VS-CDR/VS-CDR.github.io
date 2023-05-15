@@ -18,10 +18,10 @@
 
 .info__about-me-photo {
     margin: 2% 1%;
-    width: 30%;
-    height: 30%;
+    width: 21%;
+    height: 18%;
     background-size: cover;
-    cursor: none;
+    cursor: grab;
 }
 
 .info__specialized {
@@ -34,7 +34,6 @@
     height: 28%;
     background-image: url("../../img/personal/at_the_computer.webp");
     background-size: cover;
-    cursor: none;
 }
 
 .education {
@@ -60,10 +59,12 @@
     width: 24%;
     height: 24%;
     background-size: cover;
+    cursor: grab;
 }
 
 .gallery__picture_horizontal {
     width: 36%;
     height: 36%;
     background-size: cover;
+    cursor: grab;
 }

@@ -1,7 +1,7 @@
 .header__theme-button {
     position: absolute;
-    top: 16px;
-    left: 16px;
+    top: 1vh;
+    left: 1vw;
     width: 4vw;
     height: 4vw;
 }
@@ -50,12 +50,11 @@
 
 .header__text-name {
     text-decoration: none;
-    cursor: none;
 }
 
 .header__image {
     margin: 4% 4%;
     width: 33.6vw;
     height: 32vw;
-    cursor: none;
+    cursor: grab;
 }

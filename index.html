@@ -22,17 +22,24 @@
     <title>VS_coder</title>
 </head>
 <body class="page">
+<div class="popup">
+    <div class="popup__container">
+        <img class="popup__link_left" src="static/img/buttons/arrows/left-arrow.png" alt="свайп влево">
+        <img class="popup__image" src="#" alt="фото">
+        <img class="popup__link_right" src="static/img/buttons/arrows/right-arrow.png" alt="свайп вправо">
+    </div>
+</div>
 <header class="header header_dark flex-row">
     <div class="header__text header__text_dark header_flex-col">
         <p class="header__text-greeting">Привет, я ...</p>
         <p class="header__text-name" lang="ru">Владислав Шубин</p>
     </div>
     <button class="button header__theme-button header__theme-button_dark" name="ChangeTheme"></button>
-    <img class="header__image" src="static/img/personal/main.webp" alt="фотопортрет">
+    <img class="header__image popup-data__image" src="static/img/personal/main.webp" alt="фотопортрет">
 </header>
 <main class="info info_dark">
     <div class="info__about-me flex-row">
-        <img src="static/img/personal/student.webp" class="info__about-me-photo" alt="Выпускник">
+        <img class="info__about-me-photo popup-data__image" src="static/img/personal/student.webp" alt="Выпускник">
         <section class="education">
             <h3 class="education__title">Образование</h3>
             <ul class="education__info">
@@ -92,14 +99,14 @@
                 </li>
             </ul>
         </section>
-        <img class="info__process" src="static/img/personal/at_the_computer.webp" alt="фото_за_компьютером" loading="lazy">
+        <img src="static/img/personal/at_the_computer.webp" class="gallery__picture_vertical popup-data__image" alt="За компом" loading="lazy">
     </div>
     <article class="gallery">
         <h1>Еще немного фоток :)</h1>
         <div class="gallery-list">
-            <img src="static/img/personal/at_museum.webp" class="gallery__picture_vertical" alt="В музее" loading="lazy">
-            <img src="static/img/personal/in_turkey.webp" class="gallery__picture_horizontal" alt="В Турции" loading="lazy">
-            <img src="static/img/personal/from_moscow.webp" class="gallery__picture_vertical" alt="В Москве" loading="lazy">
+            <img src="static/img/personal/at_museum.webp" class="gallery__picture_vertical popup-data__image" alt="В музее" loading="lazy">
+            <img src="static/img/personal/in_turkey.webp" class="gallery__picture_horizontal popup-data__image" alt="В Турции" loading="lazy">
+            <img src="static/img/personal/from_moscow.webp" class="gallery__picture_vertical popup-data__image" alt="В Москве" loading="lazy">
         </div>
     </article>
 </main>
@@ -124,13 +131,13 @@
 <dialog class="form-popup form-popup__container" id="contact_me">
         <h1 class="form-popup__heading">Форма обратной связи</h1>
         <label for="phone" class="form-popup__text">Телефон</label>
-        <input type="tel" id="phone" required class="form-popup__input" placeholder="79165206161">
+        <input type="tel" id="phone" class="form-popup__input" placeholder="79165206161" required>
         <span class="phone-error"></span>
         <label for="email" class="form-popup__text">Email</label>
-        <input type="email" id="email" required class="form-popup__input" placeholder="VS-code-r@yandex.ru">
+        <input type="email" id="email" class="form-popup__input" placeholder="VS-code-r@yandex.ru" required>
         <span class="email-error"></span>
         <label for="text" class="form-popup__text">Текст</label>
-        <input type="text" id="text" required class="form-popup__input" placeholder="Ваше сообщение">
+        <input type="text" id="text" class="form-popup__input" placeholder="Ваше сообщение" required>
         <span class="text-error"></span>
 
         <button class="form-popup__close-button" type="button" onclick="window.contact_me.close();"></button>
