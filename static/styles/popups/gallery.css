@@ -13,6 +13,7 @@
     display: none;
     background-image: url("../../img/buttons/arrows/left-arrow.png");
     background-size: cover;
+    cursor: pointer;
 }
 
 .popup__link_right {
@@ -21,4 +22,5 @@
     display: none;
     background-image: url("../../img/buttons/arrows/right-arrow.png");
     background-size: cover;
+    cursor: pointer;
 }
