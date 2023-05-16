@@ -57,6 +57,8 @@ rain.addEventListener('click', function () {
     }
 })
 
+
+
 const popup = document.querySelector(".popup");
 popup.addEventListener('click', function(evt) {
     if (evt.target === popup) {
@@ -118,6 +120,8 @@ function closePopup(popup) {
         currentImage.classList.remove("current");
     }
 }
+
+
 
 const messagePopupButton = document.querySelector(".message-popup__close-button");
 
