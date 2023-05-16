@@ -80,6 +80,24 @@ images.forEach(function(imageElement) {
     });
 })
 
+popupLeftLink.addEventListener('click', function () {
+    const imageElement = document.querySelector(".current");
+    imageElement.classList.remove("current");
+    const leftSibling = imageElement.previousElementSibling;
+    leftSibling.classList.add("current");
+    popupImg.src = leftSibling.src;
+    checkLinks(leftSibling);
+});
+
+popupRightLink.addEventListener('click', function () {
+    const imageElement = document.querySelector(".current");
+    imageElement.classList.remove("current");
+    const rightSibling = imageElement.nextElementSibling;
+    rightSibling.classList.add("current");
+    popupImg.src = rightSibling.src;
+    checkLinks(rightSibling);
+});
+
 function checkLinks(imageElement) {
     if (!imageElement.nextElementSibling) {
         popupRightLink.setAttribute('style', 'display: none');
@@ -106,19 +124,18 @@ const messagePopupButton = document.querySelector(".message-popup__close-button"
 sendMessage()
 messagePopupClose()
 
-function helloPopupOpen() {
+function messagePopupOpen() {
     const popupMessage = document.querySelector(".message-popup");
     popupMessage.classList.add("message-popup_active");
 }
 
 function sendMessage() {
     if (!localStorage.getItem("send-flag")) {
-        setTimeout(helloPopupOpen, 30000);
+        setTimeout(messagePopupOpen, 30000);
     }
 }
 function messagePopupClose() {
-    messagePopupButton.addEventListener('click', function (evt) {
-        evt.preventDefault();
+    messagePopupButton.addEventListener('click', function () {
         localStorage.setItem("send-flag", "true");
         const popupHello = document.querySelector(".message-popup_active");
         popupHello.classList.remove("message-popup_active");
