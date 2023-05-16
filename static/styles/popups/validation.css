@@ -1,34 +1,33 @@
-.message-popup {
+.validation-popup {
     display: none;
     z-index: 512;
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 32vh;
 }
 
-.message-popup__container {
+.validation-popup__container {
     position: relative;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+    max-width: 48vw;
     padding: 4vw;
-    border-radius: 32vw;
-    background-color: #1F2833;
+    background-color: #3AAFA9;
+    border-radius: 8vw;
 }
 
-.message-popup_active {
+.validation-popup_active {
     display: block;
 }
 
-.message-popup__text {
+.validation-popup__text {
+    color: black;
     font-size: 2vw;
-    font-weight: 600;
-    color: #66FCF1;
+    font-weight: 300;
 }
 
-.message-popup__close-button {
+.validation-popup__close-button {
     position: absolute;
-    top: 4vh;
-    right: 4vw;
+    top: -4vh;
+    right: -4vw;
     width: 2vw;
     height: 2vw;
     border: none;
