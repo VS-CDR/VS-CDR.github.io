@@ -31,11 +31,10 @@
 }
 
 .info__process {
-    margin: 1vw auto;
-    width: 28%;
-    height: 28%;
-    background-image: url("../../img/personal/at_the_computer.webp");
+    width: 24%;
+    height: 24%;
     background-size: cover;
+    cursor: grab;
 }
 
 .education {
