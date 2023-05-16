@@ -1,8 +1,21 @@
 .form-popup__container {
+    pointer-events: none;
     max-width: 64vw;
     width: 100%;
     padding: 1vw;
     background-color: #1F2833;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.8s linear;
+}
+
+dialog[open] {
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+dialog::backdrop {
+    background-color: rgba(0,0,0, 0.2);
 }
 
 .form-popup__heading {
