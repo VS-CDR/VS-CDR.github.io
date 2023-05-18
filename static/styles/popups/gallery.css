@@ -7,6 +7,10 @@
     cursor: grab;
 }
 
+.popup__link:hover {
+    opacity: 0.8;
+}
+
 .popup__link_left {
     width: 4vw;
     height: 4vw;
