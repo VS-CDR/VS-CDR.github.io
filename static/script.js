@@ -161,22 +161,22 @@ feedbackButton.addEventListener('click', function () {
 })
 
 const feedbackForm = feedbackPopup.querySelector(".form-popup__form_feedback");
-feedbackForm.addEventListener('submit', function() {
+feedbackForm.addEventListener('submit', async function () {
     const phone = feedbackPopup.querySelector(".form-popup__input[id='tel']");
     const email = feedbackPopup.querySelector(".form-popup__input[id='email']");
     const text = feedbackPopup.querySelector(".form-popup__input[id='text']");
-    fetch("", {
+    return await fetch("", {
         method: "POST",
         body: JSON.stringify({
             tel: phone.value,
             email: email.value,
             text: text.value
         })
-    }).then(function() {
-            closePopup(feedbackPopup);
-        }).catch(function (err) {
-            console.log(err);
-        })
+    }).then(function () {
+        closePopup(feedbackPopup);
+    }).catch(function (error) {
+        alert(error)
+    })
 });
 
 
@@ -188,13 +188,13 @@ function hasValidInput(inputList) {
 }
 
 function showInputError(element, errorSpan) {
-    element.classList.add('popup__input_error');
-    errorSpan.classList.add('popup__error_active');
+    element.classList.add('form-popup__input_error');
+    errorSpan.classList.add('form-popup__error_active');
 }
 
 function hideInputError(element, errorSpan) {
-    element.classList.remove('popup__input_error');
-    errorSpan.classList.remove('popup__error_active');
+    element.classList.remove('form-popup__input_error');
+    errorSpan.classList.remove('form-popup__error_active');
 }
 
 function isValid(input, spanError) {
@@ -217,9 +217,9 @@ function toggleSubmit(inputs, button) {
 
 function enableValidation(forms) {
     forms.forEach((form) => {
-        const inputs = form.querySelectorAll('.popup__input');
-        const spans = form.querySelectorAll('.popup__error');
-        const buttonSubmit = form.querySelector('.popup__submit');
+        const inputs = form.querySelectorAll('.form-popup__input');
+        const spans = form.querySelectorAll('.form-popup__error');
+        const buttonSubmit = form.querySelector('.form-popup__submit-button');
         for (let i = 0; i < inputs.length; ++i) {
             inputs[i].addEventListener('input', () => {
                 isValid(inputs[i], spans[i]);

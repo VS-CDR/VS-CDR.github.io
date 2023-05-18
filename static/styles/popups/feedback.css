@@ -75,6 +75,6 @@
     visibility: hidden;
 }
 
-.popup__form-error_active {
+.form-popup__error_active {
     visibility: visible;
 }
