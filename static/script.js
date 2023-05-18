@@ -162,7 +162,7 @@ feedbackButton.addEventListener('click', function () {
 
 const feedbackForm = feedbackPopup.querySelector(".form-popup__form_feedback");
 feedbackForm.addEventListener('submit', async function () {
-    const phone = feedbackPopup.querySelector(".form-popup__input[id='tel']");
+    const phone = feedbackPopup.querySelector(".form-popup__input[id='phone']");
     const email = feedbackPopup.querySelector(".form-popup__input[id='email']");
     const text = feedbackPopup.querySelector(".form-popup__input[id='text']");
     return await fetch("", {
@@ -207,24 +207,28 @@ function isValid(input, spanError) {
 
 function toggleSubmit(inputs, button) {
     if (hasValidInput(inputs)) {
-        button.classList.remove('popup__submit_disabled');
+        button.classList.remove('button_inactive');
         button.disabled = false;
     } else {
-        button.classList.add('popup__submit_disabled');
+        button.classList.add('button_inactive');
         button.disabled = true;
     }
 }
 
-function enableValidation(forms) {
-    forms.forEach((form) => {
-        const inputs = form.querySelectorAll('.form-popup__input');
-        const spans = form.querySelectorAll('.form-popup__error');
-        const buttonSubmit = form.querySelector('.form-popup__submit-button');
-        for (let i = 0; i < inputs.length; ++i) {
-            inputs[i].addEventListener('input', () => {
-                isValid(inputs[i], spans[i]);
-                toggleSubmit(inputs, buttonSubmit);
-            });
-        }
-    });
+const form = document.querySelector('.form-popup__form_feedback')
+form.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+});
+
+enableValidation(form)
+function enableValidation(form) {
+    const inputs = form.querySelectorAll('.form-popup__input');
+    const spans = form.querySelectorAll('.form-popup__error');
+    const buttonSubmit = form.querySelector('.form-popup__submit-button');
+    for (let i = 0; i < inputs.length; ++i) {
+        inputs[i].addEventListener('input', () => {
+            isValid(inputs[i], spans[i]);
+            toggleSubmit(inputs, buttonSubmit);
+        });
+    }
 }

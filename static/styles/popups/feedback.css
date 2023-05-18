@@ -55,7 +55,6 @@
     font-size: 1.4vw;
     text-align: center;
     padding: 0;
-    border: none;
 }
 
 .form-popup__submit-button:hover {
@@ -63,8 +62,8 @@
 }
 
 .button_inactive {
-    background-color: #DEF2F1;
-    color: #1F2833;
+    color: #DEF2F1;
+    opacity: 0.5;
 }
 
 .form-popup__error {
@@ -78,3 +77,4 @@
 .form-popup__error_active {
     visibility: visible;
 }
+
