@@ -1,68 +1,68 @@
 .form-popup__container {
-    pointer-events: none;
-    max-width: 64vw;
+    margin: auto;
+    max-width: 32vw;
     width: 100%;
-    padding: 1vw;
     background-color: #1F2833;
-    display: block;
-    opacity: 0;
-    transition: opacity 0.8s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.16);
 }
 
-dialog[open] {
-    opacity: 1;
-    pointer-events: inherit;
-}
-
-dialog::backdrop {
-    background-color: rgba(0,0,0, 0.2);
+.form-popup__form_feedback {
+    max-width: 30vw;
+    width: 100%;
 }
 
 .form-popup__heading {
+    color: #3AAFA9;
     font-size: 1.6vw;
-    padding-bottom: 2vh;
     font-weight: 600;
-    color: #3AAFA9;
 }
 
-.form-popup__text {
+.form-popup__input-container {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-popup__label {
     color: #3AAFA9;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: 300;
+    padding-bottom: 1vh;
 }
 
-.form-popup__input {
-    margin-bottom: 0.8vh;
+.popup__form-input {
+    margin-bottom: 2vh;
     font-size: 1vw;
-    font-weight: 400;
-    line-height: 1vh;
+    line-height: 2vh;
 }
 
-.form-popup__button {
-    margin-top: 1vh;
-    border: none;
-    outline: none;
-    background-color: black;
-    height: 4vh;
-    max-width: 64vw;
+.popup__form-input_large {
+    height: 8vh;
+}
+
+.popup__form-submit-button {
     width: 100%;
-    font-family: 'Press Start 2P', cursive;
+    height: 4vh;
+    margin: 4vh auto;
+    color: #2B7A78;
     font-size: 1.4vw;
-    font-weight: 400;
     text-align: center;
-    color: #3AAFA9;
+    padding: 0;
+    border: none;
 }
 
-.form-popup__close-button {
-    position: absolute;
-    top: 1vh;
-    right: 1vw;
-    width: 2vw;
-    height: 2vw;
-    border: none;
-    outline: none;
-    background-color: #1F2833;
-    cursor: pointer;
-    background-image: url(../../img/buttons/close.png);
-    background-size: cover;
+.popup__form-submit-button:hover {
+    opacity: 0.8;
+}
+
+.button_inactive {
+    background-color: #DEF2F1;
+    color: #1F2833;
 }

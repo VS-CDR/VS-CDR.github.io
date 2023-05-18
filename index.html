@@ -130,7 +130,7 @@
         </li>
     </ul>
     <div class="buttons">
-        <button name="SendFeedback" class="button footer__feedback-button footer__feedback-button_dark" onclick="window.contact_me.showModal();"></button>
+        <button name="SendFeedback" class="button footer__feedback-button footer__feedback-button_dark"></button>
         <button name="ActivateRain" class="button footer__rain-button footer__rain-button_dark"></button>
     </div>
 </footer>
@@ -140,21 +140,25 @@
 <!--        <button class="validation-popup__close-button"></button>-->
 <!--    </div>-->
 <!--</div>-->
-<dialog class="form-popup form-popup__container" id="contact_me">
-        <h1 class="form-popup__heading">Форма обратной связи</h1>
-        <label for="phone" class="form-popup__text">Телефон</label>
-        <input type="tel" id="phone" class="form-popup__input" placeholder="79165206161" required>
-        <span class="phone-error"></span>
-        <label for="email" class="form-popup__text">Email</label>
-        <input type="email" id="email" class="form-popup__input" placeholder="VS-code-r@yandex.ru" required>
-        <span class="email-error"></span>
-        <label for="text" class="form-popup__text">Текст</label>
-        <input type="text" id="text" class="form-popup__input" placeholder="Ваше сообщение" required>
-        <span class="text-error"></span>
-
-        <button class="form-popup__close-button" type="button" onclick="window.contact_me.open();"></button>
-        <button class="form-popup__button" type="submit"> Отправить </button>
-</dialog>
+<div class="popup form-popup">
+    <div class="form-popup__container">
+        <form class="form-popup__form_feedback">
+            <h2 class="form-popup__heading">Форма обратной связи</h2>
+            <fieldset class="form-popup__input-container">
+                <label for="phone" class="form-popup__label">Телефон</label>
+                <input id="phone" placeholder="79165206161" type="tel" class="popup__form-input">
+                <span class="popup__form-error tel-input-error"></span>
+                <label for="email" class="form-popup__label">Email</label>
+                <input id="email" placeholder="VS-code-r@yandex.ru" type="email" class="popup__form-input" required>
+                <span class="popup__form-error email-input-error"></span>
+                <label for="text" class="form-popup__label">Текст</label>
+                <input id="text" placeholder="Ваше сообщение" type="text" class="popup__form-input popup__form-input_large" required>
+                <span class="popup__form-error text-input-error"></span>
+            </fieldset>
+            <input type="submit" value="Отправить" class="button popup__form-submit-button">
+        </form>
+    </div>
+</div>
 <div class="rain rain_animation"></div>
 <script src="static/script.js"></script>
 </body>

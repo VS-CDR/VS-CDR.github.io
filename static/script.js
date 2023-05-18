@@ -1,5 +1,4 @@
 const themeBtn = document.querySelector(".header__theme-button");
-const contact_me = document.getElementById("contact_me");
 
 function ChangeTheme() {
     let elem = document.querySelector(".header__theme-button");
@@ -145,3 +144,36 @@ function messagePopupClose() {
         popupHello.classList.remove("message-popup_active");
     })
 }
+
+const feedbackPopup = document.querySelector(".form-popup");
+const feedbackForm = feedbackPopup.querySelector(".form-popup__form_feedback");
+const feedbackButton = document.querySelector(".footer__feedback-button");
+
+feedbackPopup.addEventListener('click', function(evt) {
+    if (evt.target === feedbackPopup) {
+        closePopup(feedbackPopup);
+    }
+    evt.stopPropagation();
+});
+
+feedbackButton.addEventListener('click', function () {
+    feedbackPopup.classList.add('popup_active');
+})
+
+feedbackForm.addEventListener('submit', function() {
+    const phoneInput = feedbackPopup.querySelector(".popup__form-text-input[id='tel']");
+    const emailInput = feedbackPopup.querySelector(".popup__form-text-input[id='email']");
+    const textInput = feedbackPopup.querySelector(".popup__form-text-input[id='text']");
+    fetch("", {
+        method: "POST",
+        body: JSON.stringify({
+            tel: phoneInput.value,
+            email: emailInput.value,
+            text: textInput.value
+        })
+    }).then(function() {
+            closePopup(feedbackPopup);
+        }).catch(function (err) {
+            console.log(err);
+        })
+});
