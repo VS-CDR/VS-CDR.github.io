@@ -145,6 +145,9 @@ function messagePopupClose() {
     })
 }
 
+
+
+
 const feedbackPopup = document.querySelector(".form-popup");
 feedbackPopup.addEventListener('click', function(evt) {
     if (evt.target === feedbackPopup) {
@@ -159,15 +162,15 @@ feedbackButton.addEventListener('click', function () {
 
 const feedbackForm = feedbackPopup.querySelector(".form-popup__form_feedback");
 feedbackForm.addEventListener('submit', function() {
-    const phoneInput = feedbackPopup.querySelector(".popup__form-text-input[id='tel']");
-    const emailInput = feedbackPopup.querySelector(".popup__form-text-input[id='email']");
-    const textInput = feedbackPopup.querySelector(".popup__form-text-input[id='text']");
+    const phone = feedbackPopup.querySelector(".popup__form-text-input[id='tel']");
+    const email = feedbackPopup.querySelector(".popup__form-text-input[id='email']");
+    const text = feedbackPopup.querySelector(".popup__form-text-input[id='text']");
     fetch("", {
         method: "POST",
         body: JSON.stringify({
-            tel: phoneInput.value,
-            email: emailInput.value,
-            text: textInput.value
+            tel: phone.value,
+            email: email.value,
+            text: text.value
         })
     }).then(function() {
             closePopup(feedbackPopup);
