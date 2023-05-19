@@ -8,6 +8,7 @@
     align-items: center;
     position: relative;
     box-shadow: 0 0 2vw rgba(0, 0, 0, 0.16);
+    outline: #66FCF1 outset;
 }
 
 .form-popup__form_feedback {
@@ -55,6 +56,7 @@
     font-size: 1.4vw;
     text-align: center;
     padding: 0;
+    outline: inset;
 }
 
 .form-popup__submit-button:hover {
