@@ -1,6 +1,6 @@
 .form-popup__container {
     margin: auto;
-    max-width: 32vw;
+    max-width: 48vw;
     width: 100%;
     background-color: #1F2833;
     display: flex;
@@ -9,10 +9,11 @@
     position: relative;
     box-shadow: 0 0 2vw rgba(0, 0, 0, 0.16);
     outline: #66FCF1 outset;
+    border-radius: 1vw;
 }
 
 .form-popup__form_feedback {
-    max-width: 30vw;
+    max-width: 44vw;
     width: 100%;
 }
 
@@ -24,7 +25,7 @@
 
 .form-popup__input-container {
     padding: 0;
-    margin: 0;
+    margin-top: 4vh;
     border: 0;
     display: flex;
     flex-direction: column;
@@ -42,10 +43,14 @@
     margin-bottom: 2vh;
     font-size: 1vw;
     line-height: 2vh;
+    font-family: DialogInput, serif;
+    background-color: #DEF2F1;
+    border-radius: 0.5vh;
 }
 
 .form-popup__input_large {
-    height: 8vh;
+    height: 16vh;
+    margin-bottom: 0;
 }
 
 .form-popup__submit-button {
@@ -53,14 +58,16 @@
     height: 4vh;
     margin: 4vh auto;
     color: #2B7A78;
+    font-family: inherit;
     font-size: 1.4vw;
     text-align: center;
     padding: 0;
     outline: inset;
+    border-radius: 1vh;
 }
 
 .form-popup__submit-button:hover {
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 .button_inactive {
