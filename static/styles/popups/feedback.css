@@ -18,6 +18,7 @@
 }
 
 .form-popup__heading {
+    margin-top: 4vh;
     color: #3AAFA9;
     font-size: 1.6vw;
     font-weight: 600;
@@ -46,11 +47,6 @@
     font-family: DialogInput, serif;
     background-color: #DEF2F1;
     border-radius: 0.5vh;
-}
-
-.form-popup__input_large {
-    height: 16vh;
-    margin-bottom: 0;
 }
 
 .form-popup__submit-button {
