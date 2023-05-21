@@ -73,9 +73,9 @@
 
 .form-popup__error {
     font-weight: 400;
-    font-size: 1.2vw;
-    margin: auto auto 1vh;
-    color: crimson;
+    font-size: 0.8vw;
+    margin: auto 0.2vw 2vh;
+    color: #f18b8b;
     visibility: hidden;
 }
 

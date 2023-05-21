@@ -33,6 +33,7 @@
 .header__text {
     margin: 8%;
     font-size: 4vw;
+    cursor: grab;
 }
 
 .header__text_light {
@@ -47,7 +48,6 @@
 .header__text-greeting {
     font-size: 64%;
     margin: 4%;
-    cursor: grab;
 }
 
 .header__text-name {

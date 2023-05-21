@@ -181,10 +181,12 @@ feedbackForm.addEventListener('submit', async function () {
 
 
 
-function hasValidInput(inputList) {
-    let isOk = true;
-    inputList.forEach((elem) => { isOk = elem.validity.valid ? isOk : false });
-    return isOk;
+function hasValidInput(inputs) {
+    return inputs.some(function(inputElement) {
+        return !inputElement.validity.valid ||
+            (inputElement.type === "tel" && !validateTel(inputElement)) ||
+            (inputElement.type === "email" && !validateEmail(inputElement));
+    });
 }
 
 function showInputError(element, errorSpan) {
@@ -195,14 +197,6 @@ function showInputError(element, errorSpan) {
 function hideInputError(element, errorSpan) {
     element.classList.remove('form-popup__input_error');
     errorSpan.classList.remove('form-popup__error_active');
-}
-
-function isValid(input, spanError) {
-    if (!input.validity.valid) {
-        showInputError(input, spanError);
-    } else {
-        hideInputError(input, spanError);
-    }
 }
 
 function toggleSubmit(inputs, button) {
@@ -221,14 +215,43 @@ form.addEventListener('submit', function (evt) {
 });
 
 enableValidation(form)
+
+const emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+function validateEmail(inputElement) {
+    if (!emailPattern.test(inputElement.value)) {
+        inputElement.focus();
+        return false;
+    }
+    return true
+}
+
+const phonePattern = /^\d{11}$/;
+function validateTel(inputElement) {
+    if (!phonePattern.test(inputElement.value)) {
+        inputElement.focus();
+        return false;
+    }
+    return true
+}
+
+function isValid(inputElement, spanError) {
+    if (!inputElement.validity.valid ||
+        (inputElement.type === "email" && !validateEmail(inputElement)) ||
+        (inputElement.type === "tel" && !validateTel(inputElement))) {
+        showInputError(inputElement, spanError);
+    } else {
+        hideInputError(inputElement, spanError);
+    }
+}
+
 function enableValidation(form) {
     const inputs = form.querySelectorAll('.form-popup__input');
     const spans = form.querySelectorAll('.form-popup__error');
     const buttonSubmit = form.querySelector('.form-popup__submit-button');
     for (let i = 0; i < inputs.length; ++i) {
-        inputs[i].addEventListener('input', () => {
+        inputs[i].addEventListener('input', function() {
             isValid(inputs[i], spans[i]);
             toggleSubmit(inputs, buttonSubmit);
-        });
+        })
     }
 }

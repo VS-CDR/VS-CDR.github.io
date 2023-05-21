@@ -140,11 +140,11 @@
             <h2 class="form-popup__heading">Форма обратной связи</h2>
             <fieldset class="form-popup__input-container">
                 <label for="phone" class="form-popup__label">Телефон</label>
-                <input id="phone" placeholder="79165206161" type="tel" class="form-popup__input">
-                <span class="form-popup__error tel-input-error"></span>
+                <input id="phone" placeholder="79165206161" type="tel" class="form-popup__input" maxlength="11">
+                <span class="form-popup__error tel-input-error">Номер телефона должен состоять из 11 цифр</span>
                 <label for="email" class="form-popup__label">Email</label>
                 <input id="email" placeholder="VS-code-r@yandex.ru" type="email" class="form-popup__input" required>
-                <span class="form-popup__error email-input-error"></span>
+                <span class="form-popup__error email-input-error">Пожалуйста, проверьте, правильно ли указан адрес</span>
                 <label for="text" class="form-popup__label">Текст</label>
                 <textarea id="text" rows=8 class="form-popup__input" spellcheck="true"></textarea>
                 <span class="form-popup__error text-input-error"></span>
