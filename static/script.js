@@ -181,7 +181,7 @@ feedbackForm.addEventListener('submit', async function () {
 
 
 
-function hasValidInput(inputs) {
+function hasInvalidInput(inputs) {
     return inputs.some(function(inputElement) {
         return !inputElement.validity.valid ||
             (inputElement.type === "tel" && !validateTel(inputElement)) ||
@@ -200,12 +200,13 @@ function hideInputError(element, errorSpan) {
 }
 
 function toggleSubmit(inputs, button) {
-    if (hasValidInput(inputs)) {
-        button.classList.remove('button_inactive');
-        button.disabled = false;
-    } else {
+    if (hasInvalidInput(inputs)) {
         button.classList.add('button_inactive');
         button.disabled = true;
+    } else {
+        console.log('valid');
+        button.classList.remove('button_inactive');
+        button.disabled = false;
     }
 }
 
@@ -236,8 +237,8 @@ function validateTel(inputElement) {
 
 function isValid(inputElement, spanError) {
     if (!inputElement.validity.valid ||
-        (inputElement.type === "email" && !validateEmail(inputElement)) ||
-        (inputElement.type === "tel" && !validateTel(inputElement))) {
+        (inputElement.type === "tel" && !validateTel(inputElement) ||
+        (inputElement.type === "email" && !validateEmail(inputElement)))) {
         showInputError(inputElement, spanError);
     } else {
         hideInputError(inputElement, spanError);
@@ -245,7 +246,7 @@ function isValid(inputElement, spanError) {
 }
 
 function enableValidation(form) {
-    const inputs = form.querySelectorAll('.form-popup__input');
+    const inputs = Array.from(form.querySelectorAll('.form-popup__input'));
     const spans = form.querySelectorAll('.form-popup__error');
     const buttonSubmit = form.querySelector('.form-popup__submit-button');
     for (let i = 0; i < inputs.length; ++i) {
