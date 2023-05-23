@@ -177,7 +177,7 @@ feedbackForm.addEventListener('submit', async function () {
         setTimeout(success, 256);
         setTimeout(function () {
             closePopup(feedbackPopup);
-        }, 256);
+        }, 512);
     })
 });
 
