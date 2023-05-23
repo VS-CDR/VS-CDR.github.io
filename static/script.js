@@ -158,6 +158,7 @@ feedbackPopup.addEventListener('click', function(evt) {
 const feedbackButton = document.querySelector(".footer__feedback-button");
 feedbackButton.addEventListener('click', function () {
     feedbackPopup.classList.add('popup_active');
+    default_();
 })
 
 const feedbackForm = feedbackPopup.querySelector(".form-popup__form_feedback");
@@ -176,7 +177,7 @@ feedbackForm.addEventListener('submit', async function () {
         setTimeout(success, 256);
         setTimeout(function () {
             closePopup(feedbackPopup);
-        }, 512);
+        }, 256);
     })
 });
 
@@ -249,4 +250,8 @@ function enableValidation(form) {
 const btn = document.querySelector('.form-popup__submit-button')
 function success() {
     btn.value = "Отправлено!";
+}
+
+function default_() {
+    btn.value = "Отправить";
 }
