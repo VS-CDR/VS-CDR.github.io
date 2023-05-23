@@ -185,8 +185,8 @@ function hasInvalidInput(inputs) {
     let flag = false
     inputs.forEach(function(inputElement) {
         if (!inputElement.validity.valid ||
-            (inputElement.type === "tel" && !validateTel(inputElement)) ||
-            (inputElement.type === "email" && !validateEmail(inputElement))) {
+            (inputElement.type === "tel" && !phonePattern.test(inputElement.value) ||
+            (inputElement.type === "email" && !emailPattern.test(inputElement.value)))) {
             flag = true;
         }
     });
