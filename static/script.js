@@ -173,9 +173,10 @@ feedbackForm.addEventListener('submit', async function () {
             text: text.value
         })
     }).then(function () {
-        closePopup(feedbackPopup);
-    }).catch(function (error) {
-        alert(error)
+        setTimeout(success, 256);
+        setTimeout(function () {
+            closePopup(feedbackPopup);
+        }, 512);
     })
 });
 
@@ -208,7 +209,6 @@ function toggleSubmit(inputs, button) {
         button.classList.add('button_inactive');
         button.disabled = true;
     } else {
-        console.log('valid');
         button.classList.remove('button_inactive');
         button.disabled = false;
     }
@@ -244,4 +244,9 @@ function enableValidation(form) {
             toggleSubmit(inputs, buttonSubmit);
         })
     }
+}
+
+const btn = document.querySelector('.form-popup__submit-button')
+function success() {
+    btn.value = "Отправлено!";
 }
