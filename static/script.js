@@ -214,12 +214,11 @@ function toggleSubmit(inputs, button) {
     }
 }
 
-const form = document.querySelector('.form-popup__form_feedback')
-form.addEventListener('submit', function (evt) {
+feedbackForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
 });
 
-enableValidation(form)
+enableValidation(feedbackForm)
 
 const emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 const phonePattern = /^\d{11}$/;
