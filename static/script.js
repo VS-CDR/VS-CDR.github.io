@@ -165,9 +165,14 @@ const feedbackForm = feedbackPopup.querySelector(".form-popup__form_feedback");
 feedbackForm.addEventListener('submit', async function () {
     const form = document.querySelector('form-popup__form_feedback');
     const data = new FormData();
-    data.append('phone', form.phone.value);
-    data.append('email', form.email.value);
-    data.append('text', form.text.value);
+
+    const phone = feedbackPopup.querySelector(".form-popup__input[id='phone']");
+    const email = feedbackPopup.querySelector(".form-popup__input[id='email']");
+    const text = feedbackPopup.querySelector(".form-popup__input[id='text']");
+
+    data.append('phone', phone.value);
+    data.append('email', email.value);
+    data.append('text', text.value);
 
     return await fetch("./script.php", {
         method: "POST",
