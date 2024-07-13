@@ -163,7 +163,6 @@ feedbackButton.addEventListener('click', function () {
 
 const feedbackForm = feedbackPopup.querySelector(".form-popup__form_feedback");
 feedbackForm.addEventListener('submit', async function () {
-    const form = document.querySelector('form-popup__form_feedback');
     const data = new FormData();
 
     const phone = feedbackPopup.querySelector(".form-popup__input[id='phone']");
