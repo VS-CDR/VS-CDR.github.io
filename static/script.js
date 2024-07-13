@@ -163,23 +163,22 @@ feedbackButton.addEventListener('click', function () {
 
 const feedbackForm = feedbackPopup.querySelector(".form-popup__form_feedback");
 feedbackForm.addEventListener('submit', async function () {
-    const phone = feedbackPopup.querySelector(".form-popup__input[id='phone']");
-    const email = feedbackPopup.querySelector(".form-popup__input[id='email']");
-    const text = feedbackPopup.querySelector(".form-popup__input[id='text']");
-    return await fetch("", {
+    const form = document.querySelector('form-popup__form_feedback');
+    const data = new FormData();
+    data.append('phone', form.phone.value);
+    data.append('email', form.email.value);
+    data.append('text', form.text.value);
+
+    return await fetch("./script.php", {
         method: "POST",
-        body: JSON.stringify({
-            tel: phone.value,
-            email: email.value,
-            text: text.value
-        })
+        body: data,
     }).then(function () {
         setTimeout(success, 256);
         setTimeout(function () {
             closePopup(feedbackPopup);
         }, 512);
     })
-});
+// });
 
 
 
