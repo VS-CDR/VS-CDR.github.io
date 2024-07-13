@@ -178,7 +178,7 @@ feedbackForm.addEventListener('submit', async function () {
             closePopup(feedbackPopup);
         }, 512);
     })
-// });
+ });
 
 
 
